@@ -1,0 +1,169 @@
+<!-- Made By - Prajval Patel C0911611
+Date - Feb 4, 2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1-2</title>
+</head>
+<!-- Internal CSS -->
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    .form-container {
+        width: 30%;
+        margin: 0 auto;
+    }
+    /* Form Style */
+    #myForm {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+
+    #mandate {
+        color: red;
+    }
+    
+    #myForm input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #myForm input:focus {
+        border: none;
+        outline: none;
+    }
+
+    #submitButton {     
+        display: block;
+        margin: 0 auto;    
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 12px;
+        margin-top: 10px;       
+    }
+</style>
+<body>
+    <h1>Form</h1>
+    <div class="form-container">
+        <form id="myForm">        
+            <label for="name"><span id="mandate">*</span>Name: </label>
+            <input type="text" id="name" name="name" placeholder="Please enter your name" required><br>
+            <label for="email"><span id="mandate">*</span>Email: </label>
+            <input type="email" id="email" name="email" placeholder="Please enter your email address" required><br>      
+            <label for="age"><span id="mandate">*</span>Age: </label>  
+            <input type="number" id="age" name="age" min="18" max="100" placeholder="Please enter your age" required><br>
+            <button type="button" id="submitButton" onclick="submitFunction()">Submit</button><br>        
+        </form>
+        <h2 id="output"></h2>
+    </div>
+
+    <script>
+        // Defining variables
+        let form = document.getElementById('myForm');
+        let userName = '';
+        let userAge = 0;
+        let userEmail = '';
+        let isStudent = false;
+        let studentID = ''
+        let outputText = ''
+        let retirementYears = 0
+        // Book object defined
+        let book = {
+            title: 'The Great Gatsby',
+            author: 'F. Scott Fitzgerald',
+            publicationYear: 1925,
+            ISBN: '978-0-7432-7356-5'
+        }
+        
+        //On submit form function
+        function submitFunction() {                      
+            userName = form.elements['name'].value;
+            userAge = form.elements['age'].value;
+            userEmail = form.elements['email'].value;
+            isStudent = false;
+
+            //Validating required fields 
+            if(userName != '' && userAge != '' && userEmail != '') {
+                //Validating age to be between 18 and 100
+                if (userAge < 18 || userAge > 100) {
+                    alert('Age must be between 18 and 100');
+                    return;
+                }
+                //Checking if user is student or not based on email address
+                if(userEmail.includes('@mylambton.ca')) {
+                isStudent = true;     
+                studentID = userEmail.substring(0, userEmail.indexOf('@'));      
+                outputText = `Hello ${userName}! Your student ID is ${studentID} and you are ${userAge} years old. Keep studying!`;                    
+            }
+            else {
+                //Performing arrithmetic operation on varialbes
+                retirementYears = 60 - userAge;
+                if(retirementYears > 0) {
+                    outputText = `Hello ${userName}! You are ${userAge} years old and you have ${retirementYears} years till retirement.`
+                }
+                else {
+                    //Performing string concateation on variable
+                    outputText = `Enjoy your life ${userName}!`
+                }                
+            }   
+
+            document.getElementById('output').innerText = outputText
+            }
+            else {
+                //Setting an alert to validate required fields
+                alert ('Please fill out all required fields.')                
+            }            
+        }     
+        
+        // Display the properties of the book object
+        console.log('Title:', book.title);
+        console.log('Author:', book.author);
+        console.log('Year of Publication:', book.publicationYear);
+        console.log('ISBN:', book.ISBN);
+
+        // Update properties with new values
+        book.title = 'Rich Dad, Poor Dad';
+        book.author = 'Robert T. Kiyosaki';
+        book.publicationYear = 1977;
+
+        // Display the updated properties
+        console.log('Updated Title:', book.title);
+        console.log('Updated Author:', book.author);
+        console.log('Updated Year of Publication:', book.publicationYear);
+        console.log('ISBN:', book.ISBN);
+
+        // Add a new property
+        book.genre = 'Finance';
+
+        // Display the updated book object
+        console.log('Title:', book.title);
+        console.log('Author:', book.author);
+        console.log('Year of Publication:', book.publicationYear);
+        console.log('ISBN:', book.ISBN);
+        console.log('Genre:', book.genre);
+
+        // Delete the ISBN property
+        delete book.ISBN;
+
+        // Display the book object after deletion
+        console.log('Title:', book.title);
+        console.log('Author:', book.author);
+        console.log('Year of Publication:', book.publicationYear);
+
+        // ISBN is deleted, so trying to access it will result in undefined
+        console.log('ISBN:', book.ISBN);
+        console.log('Genre:', book.genre);
+    </script>
+</body>
+</html>
