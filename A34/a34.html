@@ -1,0 +1,45 @@
+<!-- Made By - Prajval Patel C0911611
+Date - Feb 10, 2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bf66214ad3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./a34.css" />    
+    <title>Assignment 3-4</title>
+</head>
+<body>
+    <div class="main">
+        <h1>
+            US Dollar to Canadian Dollar<span id="dot">.</span>
+            <br>
+            Convert USD to CAD at the real exchange rate
+        </h1>       
+        <div class="form-container">
+            <form id="myForm">
+                <p>Note: Please enter either of the amount to be calculated at a time.</p>
+                <table>
+                    <tr>
+                        <td><label for="usd"><b>USD</b></label></td>
+                        <td id="td_bordered"><input type="number" step="0.01" id="usd" name="usd" placeholder="0.000 US Dollars" min="0" oninput="disableAlternative()"></td>
+                        <td id="td_bordered"><img src="./images/usd.png"></td>
+                    </tr>
+                </table>                                
+                <i class="fas fa-exchange"></i>
+                <table>
+                    <tr>
+                        <td><label for="cad"><b>CAD</b></label></td>
+                        <td id="td_bordered"><input type="number" id="cad" name="cad" placeholder="0.000 Canadian Dollars" min="0" oninput="disableAlternative()"></td>
+                        <td id="td_bordered"><img src="./images/cad.png"></td>
+                    </tr>
+                </table>                                
+                <br>
+                <button type="submit" id="submitButton">CONVERT</button>
+            </form>
+        </div>        
+    </div>  
+    <script src="./a34.js"></script>  
+</body>
+</html>
