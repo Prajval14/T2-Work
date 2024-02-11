@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>    
+</head>
+<body>
+    <h1>Functions</h1>
+
+    <script>
+        var taxAmount = function (amount, rate) {
+            var calcTax = amount * rate + amount;
+            return calcTax;
+        };
+
+        var amount = 100;
+        var rate = 0.13;
+
+        // var temp = taxAmount(amount, rate);
+        // document.writeln(temp);
+
+        var input = prompt("Please enter your total amount");
+        amount2 = parseInt(input);
+
+        var temp2 = taxAmount(amount2, rate);
+        document.writeln(temp2);
+    </script>
+</body>
+</html>
