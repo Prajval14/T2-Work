@@ -67,3 +67,26 @@ body {
     color: white;
     background-color: #37507e;
 }
+
+/* Media query for screens with a max width of 768 pixels (typical for mobiles) */
+@media only screen and (max-width: 768px) {
+
+.main  {
+    width: 90%;
+}
+
+#myForm i {
+    padding: 20px 170px;
+    transform: rotate(90deg);
+}
+
+}
+
+/* Media query for screens with a minimum width of 768 pixels and a maximum of 1023 pixels (typical for tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+.main {
+    width: 100%;
+}
+
+}
