@@ -2,6 +2,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Main element CSS */
 .main {
     margin: 0 auto;
     width: 50%;
@@ -13,6 +14,7 @@ body {
     padding: 30px;
 }
 
+/* Form CSS */
 #dot, #myForm i {
     color: #16bdff;
 }
@@ -47,6 +49,7 @@ body {
     width: 30px;
 }
 
+/* Table CSS */
 #td_bordered {
     border: 1px solid lightgrey;
     border-collapse: collapse;
@@ -70,23 +73,19 @@ body {
 
 /* Media query for screens with a max width of 768 pixels (typical for mobiles) */
 @media only screen and (max-width: 768px) {
+    .main  {
+        width: 90%;
+    }
 
-.main  {
-    width: 90%;
-}
-
-#myForm i {
-    padding: 20px 170px;
-    transform: rotate(90deg);
-}
-
+    #myForm i {
+        padding: 20px 170px;
+        transform: rotate(90deg);
+    }
 }
 
 /* Media query for screens with a minimum width of 768 pixels and a maximum of 1023 pixels (typical for tablets) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-.main {
-    width: 100%;
-}
-
+    .main {
+        width: 100%;
+    }
 }
