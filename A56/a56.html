@@ -1,0 +1,56 @@
+<!-- Made By - 
+    Prajval Patel(C0911611)
+    Urvesh
+    Vishal
+    Deep
+    Trishika
+Date - Feb 25, 2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5-6</title>
+    <!-- Embedded JS -->
+    <script>
+        //Function to check driver's eligibility
+        function checkEligibility() {
+            event.preventDefault();
+
+            var driverName = document.getElementById("name").value;
+            var driverAge = parseInt(document.getElementById("age").value);
+            var hasCriminalRecord = document.querySelector('input[name="criminalRecord"]:checked').value;
+            
+            //Condition to check if driver's age is between 18 and 65 and if they had any criminal records or not
+            if (driverAge >= 18 && driverAge <= 65 && hasCriminalRecord == 'no') {
+                document.getElementById("result").innerHTML = driverName + ", you are eligible to drive.";
+            } else {
+                document.getElementById("result").innerHTML = driverName + ", you are not eligible to drive.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Driver Eligibility Check</h2>
+    <form id="driverForm" onsubmit="checkEligibility()">
+        <label for="name">Name: </label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="age">Age: </label>
+        <input type="number" id="age" required>
+        <br>
+        <label>Do you have any criminal records (failed tickets, drunk driving, driving under influence of drugs)?</label>         
+        <label>
+            <input type="radio" name="criminalRecord" value="yes" required>Yes
+        </label>        
+        <label>
+            <input type="radio" name="criminalRecord" value="no">No
+        </label>
+        <br>
+        <button type="submit">Check Eligibility</button>        
+    </form>
+    <!-- Print eligibility result -->
+    <p id="result"></p>
+</body>
+</html>
