@@ -1,0 +1,34 @@
+<!-- Made By - 
+    Prajval Patel(C0911611)
+    Urvesh
+    Vishal
+    Deep
+    Trishika
+Date -  -->
+
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- Creating an image element and adding an on click function -->
+    <img id="myImage" onclick="changeImage()" src="https://image.ibb.co/hoBxtm/light_bulb_off.png" width="180" height="180">
+    <!-- User's guide -->
+    <p>Click the light bulb to turn on/off the light.</p>
+    <!-- Embedded JavaScript -->
+    <script>
+        // Defining the function to use when user click's on image
+        function changeImage() {
+            // Declaring and initializing variable to fetch image element
+            var image = document.getElementById("myImage");
+            /* Condition to check if the image src contains the matching text i.e. light_bulb_on for instance
+            So the condition will check if the bulb image is ON, it will change it to OFF and vice versa */
+            if (image.src.match("light_bulb_on")) {
+                // If the image src matches text, change the src of image to off
+                image.src = "https://image.ibb.co/hoBxtm/light_bulb_off.png";
+            } else {
+                // Else change it to on
+                image.src = "https://image.ibb.co/cBBaeR/light_bulb_on.png";
+            }
+        }
+    </script>
+</body>
+</html>
