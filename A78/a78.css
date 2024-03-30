@@ -1,0 +1,62 @@
+
+/* Made By - Prajval Patel C0911611
+Date - March 29th, 2024 */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+main {    
+    margin: 0 auto;
+    padding: 20px;
+    border: 0;
+    border-radius: 10px;
+    width: 500px;
+    background-color: antiquewhite;
+}
+
+.highlight {
+    font-size: small;
+    color: red;
+}
+
+form {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+form input {
+    width: -webkit-fill-available;    
+    border: 0;
+    border-radius: 3px;
+    padding: 7px;
+}
+
+form input:focus {
+    border: 0;
+    outline: none;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+form button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: black;
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+}

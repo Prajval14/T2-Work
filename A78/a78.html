@@ -1,0 +1,74 @@
+<!-- Made By - Prajval Patel C0911611
+Date - March 29th, 2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7-8</title>
+    <link rel="stylesheet" href="./a78.css">
+    <script src="./a78.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Register a new Student</h1>
+        <hr>
+        <form id="myForm">
+            <!-- First Name -->
+            <label for="first_name">First Name<span class="highlight">*</span></label>
+            <br>
+            <input type="text" name="first_name" id="first_name" placeholder="Enter First Name" class="required">
+            <span id="first_name_error" class="highlight"></span>
+            <br>
+            <br>
+            <!-- Middle Name -->
+            <label for="middle_name">Middle Name</label>            
+            <br>
+            <input type="text" name="middle_name" id="middle_name" placeholder="Enter Middle Name">
+            <span id="middle_name_error" class="highlight"></span>
+            <br>
+            <br>
+            <!-- Last Name -->
+            <label for="last_name">Last Name<span class="highlight">*</span></label>            
+            <br>
+            <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" class="required">
+            <span id="last_name_error" class="highlight"></span>
+            <br>
+            <br>
+            <!-- Term Selection -->
+            <label>Select Term:<span class="highlight">*</span> </label>            
+            <br>
+            <label for="summer"><input type="radio" id="summer" name="term" value="summer"> Summer 2024</label>
+            <label for="fall"><input type="radio" id="fall" name="term" value="fall"> Fall 2024</label>
+            <label for="winter"><input type="radio" id="winter" name="term" value="winter"> Winter 2025</label>
+            <br>
+            <span id="term_error" class="highlight"></span>
+            <br>
+            <br>
+            <!-- Email -->
+            <label for="email">Email<span class="highlight">*</span></label>            
+            <br>
+            <input type="text" name="email" id="email" placeholder="Enter Email Address" class="required">
+            <span id="email_error" class="highlight"></span>
+            <br>
+            <br>
+            <!-- Password -->
+            <label for="password">Password<span class="highlight">*</span></label>            
+            <br>
+            <input type="password" name="password" id="password" placeholder="Enter a new Password" class="required">
+            <span id="password_error" class="highlight"></span>
+            <br>
+            <br>
+            <!-- Confirm Password -->
+            <label for="confirm_password">Confirm Password<span class="highlight">*</span></label>            
+            <br>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm new Password" class="required">
+            <span id="confirm_password_error" class="highlight"></span>
+            <br>
+            <!-- Register Button -->
+            <button type="button" onclick="formSubmit()">REGISTER</button>
+        </form>
+    </main>
+</body>
+</html>
